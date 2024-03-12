@@ -1,15 +1,14 @@
-import './App.css';
-import Header from './components/Header.js';
-import Nav from './components/Nav.js';
-import Footer from './components/Footer.js';
-import Main from './components/Main.js';
+import "./App.css";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
 
 function App() {
   return (
     <main>
-
-    <Header/>
     <Nav/>
+    <Header/>
     <Main/>
     <Footer/>
 
