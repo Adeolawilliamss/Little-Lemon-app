@@ -55,31 +55,65 @@ body {
   padding: 20px;
 }
 
+
+
+/* Common styles for all screen sizes */
 header {
-  color: white;
   text-align: center;
   padding: 20px;
   background-color: #495E57;
-  width: 100%;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #F4CE14;
-  margin-right: 210px;
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  header {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+    margin-right: 210px;
+    font-family: 'Markazi Text', sans-serif;
+    color: #F4CE14;
+  }
+/* 
+  header h2 {
+    margin-top: -40px;
+    margin-right: 350px;
+  } */
 }
 
-header h2 {
-  margin-right: 350px;
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 1.8rem; /* Decrease font size for smaller screens */
+    margin-right: 230px; /* Adjust margin */
+    color: #F4CE14;
+  }
+
+ 
+  
+  .custom-button {
+    margin-right: 20px; /* Adjust margin */
+  }
 }
+
 
 footer {
   background-color: #D9D9D9;
-  text-align: center;
+  /* text-align: center; */
   padding: 2em;
   margin-top: auto;
   width: 100%;
+  max-width: 1150px; /* Set a maximum width for the footer */
+  margin-left: auto; /* Center the footer horizontally */
+  margin-right: auto; /* Center the footer horizontally */
 }
+
+
 
 nav {
   margin-top: 20px;
@@ -97,12 +131,12 @@ nav ul li {
   margin: 0 10px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   nav {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
   }
+
   nav ul {
     display: flex;
     flex-direction: column;
@@ -110,6 +144,6 @@ nav ul li {
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 10px 0; /* Adjust margin for smaller screens */
   }
 }

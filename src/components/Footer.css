@@ -1,0 +1,65 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 100px; */
+    margin-top: auto;
+}
+
+.left-sectionn {
+    width: 50%;
+}
+
+.right-sectionn {
+   width:50%;
+   display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.right-sectionn ul {
+    list-style-type: none;
+}
+
+/* Remove underline and change color for all anchor tags inside ul */
+.right-sectionn ul li a {
+    text-decoration: none;
+    color: #333333; /* Dark ash color */
+  }
+  
+  /* Style the h1 headings inside ul */
+  .right-sectionn ul h1 {
+    color: #333333; /* Dark ash color */
+    font-size: 18px;
+  }
+
+  @media (max-width: 767px) {
+    .footer-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      align-items: center; /* Center elements horizontally */
+    }
+  
+    .left-sectionn {
+      width: 40%; /* Take up full width on smaller screens */
+    }
+  
+    .right-sectionn {
+      width: 20%; /* Take up full width on smaller screens */
+      margin-top: 10px; /* Add some margin to separate sections */
+      margin-left: -150px;
+      /* margin-right: auto; */
+    }
+  
+    .right-sectionn > div {
+      width: 5%; /* Take up full width on smaller screens */
+      margin-bottom: 10px; /* Add some margin to separate sections */
+    }
+  
+    .right-sectionn ul {
+      padding-left: 0; /* Remove default padding */
+    }
+  
+    .right-sectionn ul h1 {
+      font-size: 15px; /* Decrease font size for smaller screens */
+    }
+  }
+  
