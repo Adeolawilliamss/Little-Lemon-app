@@ -1,14 +1,13 @@
-import React, { useState, useEffect} from 'react';
-import CustomButton from './CustomButton';
-import Specials from './Specials';
-import CustomersSay from './CustomersSay';
+import React, { useState, useEffect, useRef } from 'react';
+import Specials from './OrderOnline/Specials';
+import Testimonials from './Testimonials';
 import About from './Chicago';
-import BookingForm from './BookingForm';
-import './Modal.css'; 
+import { Link } from 'react-router-dom'; // Import Link
+import pages from '../utils/pages';
+import Header from './Header';
 
 function HomePage() {
   const [windowWidth, setWindowWidth] = useState(0);
-  const [isBookingFormVisible, setIsBookingFormVisible] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,38 +24,23 @@ function HomePage() {
     };
   }, []);
 
-  const handleBookingButtonClick = () => {
-   setIsBookingFormVisible(true); 
- };
-
- const handleClose = () => {
-    setIsBookingFormVisible(false);
-  };
-
-
   return (
     <div className="container">
+      <Header />
       <div className="row">
         <h2 style={{ marginRight: windowWidth > 768 ? '400px' : '1000px', marginTop: windowWidth > 768 ? '100px' : '200px' }}>This Week's Specials</h2>
-        <CustomButton text="Online Menu" style={{ marginLeft: '530px', marginTop:'-40px'}} onClick={handleBookingButtonClick} />
-        <div className="specials-container">
-          <Specials imageUrl="greek salad.jpg" title="Greek Salad" description="The Famous greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons" />
-          <Specials imageUrl="bruchetta.jpg" title="Bruchetta" description="Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil" />
-          <Specials imageUrl="lemon dessert.jpg" title="Lemon Dessert" description="Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil" />
+        <Link to={pages.get('menu').path} className="custom-button" style={{ marginLeft: '530px', marginTop:'-40px' , textDecoration: 'none'}}>
+          Online Menu
+        </Link>
+          <div className='delivery-container'>
+            <Specials imageUrl="greek salad.jpg" title="Greek Salad" price="$5.99" description="The Famous greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons" />
+            <Specials imageUrl="bruchetta.jpg" title="Bruchetta" price="$12.99" description="Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil" />
+            <Specials imageUrl="lemon dessert.jpg" title="Lemon Dessert" price="$4.99" description="Indulge in our refreshing Lemon Dessert, a delightful treat bursting with citrusy flavor." />
+          </div>
         </div>
-        <CustomersSay />
+        <Testimonials />
         <About />
-      
-        {isBookingFormVisible && (
-  <div className="modal-container" onClick={handleClose}>
-    <div className="modal" onClick={(e) => e.stopPropagation()}>
-      <BookingForm onDateChange={handleClose} onClose={handleClose} />
-    </div>
-  </div>
-)}
-
       </div>
-    </div>
   );
 }
 

@@ -1,0 +1,63 @@
+/* Menu.css */
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .menu-container {
+    justify-content: center; /* Center items on mobile screens */
+  }
+}
+
+.menu-card {
+  width: calc((100% - 40px) / 3); /* Calculate the width for three cards per row with margin */
+  margin-bottom: 20px; /* Add margin between rows */
+}
+
+@media (max-width: 767px) {
+  .menu-card {
+    width: calc((100% - 20px) / 2); /* Calculate the width for two cards per row with margin on mobile */
+  }
+}
+
+.tabs {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.tabs li {
+  margin-right: 10px;
+}
+.tab-button {
+  flex-grow: 2; /* Allow tab buttons to stretch */
+  background-color: #495E57; /* Match the background color of the BookingPage header */
+  color: #FFFFFF; /* Match the text color of the BookingPage header */
+  border: none;
+  border-radius: 3px 3px 0 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #eaeaea;
+  color: #333;
+}
+
+.tab-content {
+  display: flex; /* Display the cards side by side */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Adjust as needed */
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

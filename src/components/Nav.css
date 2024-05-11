@@ -1,23 +1,40 @@
-/* unvisited link */
-a:link {
-    color: black;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: green;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: hotpink;
-  }
-  
-  /* selected link */
-  a:active {
-    color: blue;
-  }
+nav {
+  background-color: #ffffff;
+}
 
-  a {
-    text-decoration: none;
-  }
+nav ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  display: block; /* Ensure the link takes up the entire space of the li */
+  padding: 20px; /* Add padding for clickable area */
+  margin: none;
+}
+
+nav ul li:hover {
+  background-color: #495E57;
+}
+
+nav ul li:hover a {
+  color: white;
+}
+
+.active-link {
+  background-color: #495E57;
+  color: white;
+}
+
+.cart-icon {
+  float: right;
+  margin-right: 300px;
+}
