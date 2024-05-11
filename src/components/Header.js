@@ -1,14 +1,11 @@
 /* eslint-disable no-undef */
 
 import React, { useState, useEffect } from 'react';
-import CustomButton from './CustomButton';
-import BookingForm from './BookingForm';
-import './Modal.css';
+import { Link } from 'react-router-dom'; // Import Link
+import pages from '../utils/pages';
 
   function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isBookingFormVisible, setIsBookingFormVisible] = useState(false);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,15 +19,6 @@ import './Modal.css';
     };
   }, []);
 
-  const handleBookingButtonClick = () => {
-    setIsBookingFormVisible(true); // Show the BookingForm when the button is clicked
-  };
-
-
-  const handleClose = () => {
-    setIsBookingFormVisible(false); // Close the BookingForm when the form is submitted or closed
-  };
-
   return (
      <header style={{ position: 'relative' }}>
              <img src='Mainpicture.jpg' alt='Main'
@@ -43,18 +31,13 @@ import './Modal.css';
          <p style={{ marginRight: windowWidth > 768 ? '270px' : '245px', fontSize: windowWidth > 768 ? '1rem' : '13px' }}>mediterreanean resturant</p>
          <p style={{ marginRight: windowWidth > 768 ? '270px' : '220px', fontSize: windowWidth > 768 ? '1rem' : '13px' }}>Focused on traditional recipies</p>
        </div>
-       <CustomButton text="Reserve A Table" style={{ marginRight:windowWidth > 768? '350px': '270px'}} onClick={handleBookingButtonClick} />
-      
-      {isBookingFormVisible && (
-   <div className="modal-container" onClick={handleClose}>
-     <div className="modal" onClick={(e) => e.stopPropagation()}>
-      <BookingForm onDateChange={handleClose} onClose={handleClose}/>
-     </div>
-   </div>
- )}
-
+       <Link to={pages.get('bookingPage').path} className="custom-button" style={{ marginRight:windowWidth > 768? '350px': '270px' , textDecoration: 'none'}}>
+          Reserve A Table
+        </Link>
+        
      </header>
    );
  }
 
  export default Header;
+
