@@ -6,6 +6,5 @@ pages.set('bookingPage', { name: 'Reservations', path: '/bookingPage', anchorabl
 pages.set('confirmedBooking', { name: 'Confirmed Booking', path: '/confirmed-booking', anchorable: false });
 pages.set('orderOnline', { name: 'Order Online', path: '/order-online', anchorable: true });
 pages.set('cartPage', { name: 'Cart', path: '/cart', anchorable: true }); // Add the cart page here
-// pages.set('login', { name: 'Login', path: '/login', anchorable: true });
 
 export default pages;

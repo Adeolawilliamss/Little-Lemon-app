@@ -1,28 +1,80 @@
-/* Menu.css */
-
+/* Container for the entire menu */
 .menu-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@media (max-width: 767px) {
-  .menu-container {
-    justify-content: center; /* Center items on mobile screens */
-  }
-}
-
 .menu-card {
-  width: calc((100% - 40px) / 3); /* Calculate the width for three cards per row with margin */
-  margin-bottom: 20px; /* Add margin between rows */
+  width: 460px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 1150px;
+  gap: 20px;
+  margin-bottom: 20px; 
 }
 
-@media (max-width: 767px) {
-  .menu-card {
-    width: calc((100% - 20px) / 2); /* Calculate the width for two cards per row with margin on mobile */
-  }
+.menu-card:hover {
+  transform: translateY(-5px);
 }
 
+.menu-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.menu-card .card-content {
+  padding: 14px;
+}
+
+.menu-card .card-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.menu-card .card-description {
+  margin: 8px 0;
+}
+
+.menu-card .price {
+  font-weight: bold;
+  color: #EE9972;
+  font-size: large;
+} 
+
+.card-title span {
+  font-weight: bold;
+  color: #EE9972;
+  margin-left: 35px;
+}
+
+
+/* Order button styling */
+.Order-button {
+  margin-top: 40px;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-weight: bold;
+  border: 0.1875rem solid #F4CE14;
+  transition: background, border, color 0.5s;
+}
+
+.Order-button:hover,
+.Order-button:focus {
+  background-color: #253d35;
+  border-color: #495E57;
+  color: #FFFFFF;
+}
+
+
+/* Tab styling */
 .tabs {
   list-style-type: none;
   display: flex;
@@ -32,6 +84,7 @@
 .tabs li {
   margin-right: 10px;
 }
+
 .tab-button {
   flex-grow: 2; /* Allow tab buttons to stretch */
   background-color: #495E57; /* Match the background color of the BookingPage header */
@@ -47,11 +100,12 @@
   color: #333;
 }
 
+/* Content within each tab */
 .tab-content {
-  display: flex; /* Display the cards side by side */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  justify-content: center; /* Center the cards horizontally */
-  gap: 20px; /* Adjust as needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .hidden {
