@@ -16,26 +16,28 @@ function Nav() {
 
   return (
     <nav>
-      <ul>
-        <li>
+      <div className="nav-container">
+        <div className="logo">
           <Link to="/">
-            <img src="LittleLemonLogo.png" alt="Little Lemon Logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+            <img src="LittleLemonLogo.png" alt="Little Lemon Logo"/>
           </Link>
-        </li>
-        {Array.from(pages.values())
-          .filter(page => page.anchorable)
-          .map((page, index) => (
-            <li key={index}>
-              <Link to={page.path} className={activeLink === page.path ? "active-link" : ""}>
-              {page.name === "Cart" ? (
-                  <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
-                ) : (
-                  page.name
-                )}
-              </Link>
-            </li>
-          ))}
-      </ul>
+        </div>
+        <ul>
+          {Array.from(pages.values())
+             .filter(page => page.anchorable && page.name !== 'Home')
+            .map((page, index) => (
+              <li key={index}>
+                <Link to={page.path} className={activeLink === page.path ? "active-link" : ""}>
+                  {page.name === "Cart" ? (
+                    <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
+                  ) : (
+                    page.name
+                  )}
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </div>
     </nav>
   );
 }

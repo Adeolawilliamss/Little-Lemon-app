@@ -35,7 +35,7 @@ const customers = [
 function Testimonials() {
   return (
     <div className="testimonial-container" id="CustomerSay">
-      <h2 className="testimonial-header">What people say about us!</h2>
+      <h2 className="testimonial-header">What people say about us! &#128525;</h2>
       <div className="testimonial">
         {customers.map((customer, index) => (
           <TestimonialCard key={index} customer={customer} />

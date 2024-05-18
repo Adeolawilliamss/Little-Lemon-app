@@ -59,7 +59,6 @@
   .card-image {
     width: 100%; /* Set image width to 100% of card */
     height: auto; /* Maintain aspect ratio */
-    /* object-fit: cover; */
     border-radius: 4px;
   }
 
@@ -81,9 +80,9 @@
 
 .delivery-container {
   display: flex;
-  justify-content: space-between; /* Spread the elements apart horizontally */
-  align-items: center; /* Align the elements vertically */
-  margin-top: 10px; /* Add some top margin */
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 10px;
 }
 
 .delivery-container span {
@@ -92,8 +91,8 @@
 }
 
 .motorcycle-icon {
-  margin-right: 90px; /* Add left margin to separate the icon from the text */
-  font-size: 15px; /* Adjust the font size of the icon */
+  margin-right: 90px;
+  font-size: 15px; 
 }
 
 .card-title span {
@@ -101,11 +100,6 @@ font-weight: bold;
 color: #EE9972;
 margin-left: 35px;
 }
-/* 
-.Order-button {
-  margin-top: 40px;
-} */
-
 
 .Order-button {
   margin-top: 40px;

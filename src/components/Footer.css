@@ -1,7 +1,6 @@
 .footer-container {
     display: flex;
     justify-content: space-between;
-    /* gap: 100px; */
     margin-top: auto;
 }
 
