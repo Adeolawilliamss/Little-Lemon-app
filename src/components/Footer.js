@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './Footer.css';
+import './Styles/Footer.css';
+import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaArrowRight } from 'react-icons/fa';
 
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -15,53 +16,63 @@ const Footer = () => {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  // console.log('Window Width:', windowWidth);
-
   return (
     <footer id="Footer">
-    <div className="footer-container">
-      <div className="left-sectionn">
-      <div>
-            <img style={{width:windowWidth > 768? '60%':'30%'}} src="Mario and Adrian b.jpg" alt="closing footer" />
+      <div className="logo__content">
+        <div className="img__container">
+          <img style={{ width: windowWidth > 768 ? '100%' : '30%' }} src="Meta-header.png" alt="closing footer" />
+        </div>
+        <h1>Little Lemon</h1>
+      </div>
+      <hr />
+      <div className="footer__content">
+        <div className="subscribe">
+          <h1>Subscribe to our newsletter</h1>
+          <div className="input-container">
+            <input type='email' placeholder='Enter your Email' />
+            <FaArrowRight className="arrow" />
+          </div>
+          <hr />
+          <div className="socials">
+            <a href="#"><FaFacebook /></a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaPinterest /></a>
+          </div>
+        </div>
+        <div className="footer__text">
+          <div className="footer__heading">
+            <h3>Service</h3>
+            <div>
+              <p>Online Order</p>
+              <p>Pre-Reservation</p>
+              <p>24/7 services</p>
+              <p>Foodie Place</p>
+              <p>SuperChef</p>
+            </div>
+          </div>
+          <div className="footer__heading">
+            <h3>Contact</h3>
+            <div>
+              <p>Address</p>
+              <p>Phone Number</p>
+              <p>E-mail</p>
+            </div>
+          </div>
+          <div className="footer__heading">
+            <h3>Social Media Links</h3>
+            <div>
+              <p>Facebook</p>
+              <p>Twitter</p>
+              <p>Instagram</p>
+              <p>Pinterest</p>
+            </div>
+          </div>
         </div>
       </div>
-
-         <div className="right-sectionn">
-         <div className="first-section">
-         <ul>
-         <h1>Doormat Navigation</h1>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/bookings">Reservations</a></li>
-        <li><a href="/order-online">Order Online</a></li>
-        <li><a href="/login">Login</a></li>
-        </ul>
-      </div>
-
-         <div className="second-section">
-         <ul>
-          <h1>Contact</h1>
-        <li><a href="/terms">Address</a></li>
-        <li><a href="/privacy">Phone Number</a></li>
-        <li><a href="/contact">E-mail</a></li>
-        </ul>
-      </div>
-     
-       <div className="third-section">
-       <ul>
-          <h1>Social Media Links</h1>
-        <li><a href="/terms">Address</a></li>
-        <li><a href="/privacy">Phone Number</a></li>
-        <li><a href="/contact">Email</a></li>
-       </ul>
-      </div>
-         </div>
-        
-
-      </div>
-      </footer>
+    </footer>
   );
 };
 
 export default Footer;
+

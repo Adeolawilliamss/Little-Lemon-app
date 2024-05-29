@@ -1,0 +1,48 @@
+.testimonial-container {
+  background-color: #495E57;
+  padding: 120px;
+  width: 80%;
+  margin: auto;
+  max-width: 1350px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonial-header {
+  text-align: center;
+  color: aliceblue;
+}
+
+/* Responsive design for the testimonial container */
+@media screen and (max-width: 767px) {
+  .testimonial-container {
+    padding: 60px;
+    width: 90%;
+  }
+
+  .testimonial {
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+  }
+
+  .testimonial-header {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .testimonial-container {
+    padding: 30px;
+    width: 95%;
+  }
+
+  .testimonial-header {
+    font-size: 1.2rem;
+  }
+}

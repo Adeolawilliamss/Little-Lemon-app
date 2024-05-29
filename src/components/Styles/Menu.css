@@ -5,6 +5,7 @@
   align-items: center;
 }
 
+/* Menu card styling */
 .menu-card {
   width: 460px;
   border: 1px solid #ddd;
@@ -53,7 +54,6 @@
   margin-left: 35px;
 }
 
-
 /* Order button styling */
 .Order-button {
   margin-top: 40px;
@@ -73,7 +73,6 @@
   color: #FFFFFF;
 }
 
-
 /* Tab styling */
 .tabs {
   list-style-type: none;
@@ -86,9 +85,9 @@
 }
 
 .tab-button {
-  flex-grow: 2; /* Allow tab buttons to stretch */
-  background-color: #495E57; /* Match the background color of the BookingPage header */
-  color: #FFFFFF; /* Match the text color of the BookingPage header */
+  flex-grow: 2;
+  background-color: #495E57;
+  color: #FFFFFF;
   border: none;
   border-radius: 3px 3px 0 0;
   padding: 10px 15px;
@@ -114,4 +113,64 @@
 
 .visible {
   display: block;
+}
+
+/* Responsive styling for tablets and below */
+@media (max-width: 960px) {
+  .menu-card {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .Order-button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .tabs {
+    flex-direction: column; 
+  }
+
+  .tab-button {
+    width: 100%;
+    margin-bottom: 10px; 
+  }
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 767px) {
+  .menu-card {
+    width: 100%; 
+    margin-bottom: 15px;
+  }
+
+  .menu-card .card-title {
+    font-size: 1rem;
+  }
+
+  .menu-card .card-description {
+    font-size: 0.9rem;
+  }
+
+  .menu-card .price {
+    font-size: medium; 
+  }
+
+  .Order-button {
+    padding: 0.5rem;
+  }
+
+  .tabs {
+    flex-direction: column; 
+  }
+
+  .tab-button {
+    width: 100%;
+    margin-bottom: 5px; 
+  }
+
+  .tab-content {
+    gap: 10px; 
+  }
 }

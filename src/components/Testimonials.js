@@ -1,6 +1,6 @@
 import React from 'react';
-import TestimonialCard from './TestimonialCard'; // Import your TestimonialCard component
-import './Testimonials.css';
+import TestimonialCard from './TestimonialCard';
+import './Styles/Testimonials.css';
 
 const customers = [
   {
