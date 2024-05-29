@@ -37,9 +37,14 @@
   }
 }
 
-/* App.css */
+/* Layout related styles */
+.container {
+  max-width: 1200px;
+  /* margin: 0 auto;
+  padding: 20px; */
+}
 
-/* Base styles */
+
 body {
   display: flex;
   flex-direction: column;
@@ -49,22 +54,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+:root {
+  --color: #000;
+  --background: #fff;
+  --primary: #333;
+  --btn-color: #ffcc00;
+  --text-color: #333;
 }
 
-
-
-/* Common styles for all screen sizes */
 header {
   text-align: center;
   padding: 20px;
   background-color: #495E57;
 }
 
-/* Styles for larger screens */
 @media (min-width: 768px) {
   header {
     width: 100%;
@@ -79,71 +82,27 @@ header {
     font-family: 'Markazi Text', sans-serif;
     color: #F4CE14;
   }
-/* 
-  header h2 {
-    margin-top: -40px;
-    margin-right: 350px;
-  } */
 }
 
-/* Styles for smaller screens */
 @media (max-width: 767px) {
   header h1 {
-    font-size: 1.8rem; /* Decrease font size for smaller screens */
-    margin-right: 230px; /* Adjust margin */
+    font-size: 1.8rem;
+    margin-right: 230px;
     color: #F4CE14;
   }
 
- 
-  
   .custom-button {
-    margin-right: 20px; /* Adjust margin */
+    margin-right: 20px;
   }
 }
-
 
 footer {
   background-color: #D9D9D9;
-  /* text-align: center; */
   padding: 2em;
   margin-top: auto;
   width: 100%;
-  max-width: 1150px; /* Set a maximum width for the footer */
-  margin-left: auto; /* Center the footer horizontally */
-  margin-right: auto; /* Center the footer horizontally */
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-nav {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-@media (max-width: 767px) {
-  nav {
-    margin-top: 10px; /* Adjust margin for smaller screens */
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0; /* Adjust margin for smaller screens */
-  }
-}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
-import './TestimonialCard.css';
+import './Styles/TestimonialCard.css';
 
 const TestimonialCard = ({ customer }) => {
   const renderStars = () => {

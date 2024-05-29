@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { clearCart, deleteFromCart, addToCart } from '../redux/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
-import './CartPage.css';
+import '../Styles/CartPage.css';
 
 const CartPage = () => {
     const dispatch = useDispatch();

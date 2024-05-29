@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './Menu.css';
+import '../Styles/Menu.css';
+import '../Styles/Toast.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,7 +25,8 @@ const Menu = () => {
       description: item.description
     };
     dispatch(addToCart(itemToAdd));
-    toast.success('Item Added Successfully');
+    // toast.success('Item Added Successfully');
+    toast.success(<div className="toast-message">Item Added Successfully</div>);
   };
 
   const tabs = [
@@ -34,7 +36,7 @@ const Menu = () => {
     ]},
     { title: 'Main Dishes', items: [
       { id: 'lemon-dessert', imageUrl: "lemon dessert.jpg", title: "Lemon Dessert", price: "$4.99", description: "Indulge in our refreshing Lemon Dessert, a delightful treat bursting with citrusy flavor." },
-      { id: 'cauliflower-tacos', imageUrl: "MenuPictures/cauliflower tacos.jpeg", title: "Cauliflower Tacos", price: "$4.99", description: "Experience a burst of flavor with our Cauliflower Tacos, a tantalizing twist on the classic Mexican dish." },
+      { id: 'cauliflower-tacos', imageUrl: "MenuPictures/Cauliflower tacos2.jpg", title: "Cauliflower Tacos", price: "$4.99", description: "Experience a burst of flavor with our Cauliflower Tacos, a tantalizing twist on the classic Mexican dish." },
       { id: 'crepe', imageUrl: "MenuPictures/crepes.jpeg", title: "Crepe", price: "$4.99", description: "Indulge in the delicate and delightful taste of our Crepes, a classic French delicacy reimagined with a touch of elegance and flair." }
     ]},
     { title: 'Foreign', items: [

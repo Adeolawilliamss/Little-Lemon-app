@@ -1,0 +1,78 @@
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out; 
+  margin: 10px;
+  width: calc(100% - 40px);
+  max-width: 400px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.testimonial-card .rating {
+  color: #f4ce14;
+}
+
+.testimonial-card .rating svg {
+  margin-right: 3px;
+}
+
+.testimonial-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive design for testimonial cards */
+@media screen and (max-width: 767px) {
+  .testimonial-card {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 14px;
+  }
+
+  .testimonial-card p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .testimonial-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .testimonial-card img {
+    width: 60px; 
+    height: 60px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 12px; 
+  }
+
+  .testimonial-card p {
+    font-size: 10px;
+  }
+}

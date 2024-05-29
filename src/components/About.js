@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import './Styles/About.css';
 import { FaCar, FaHeadphonesAlt, FaWallet, FaServicestack } from 'react-icons/fa'; 
 
 const About = () => {
