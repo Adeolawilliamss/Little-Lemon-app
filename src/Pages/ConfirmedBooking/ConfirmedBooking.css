@@ -1,0 +1,49 @@
+.confirmed-booking {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	padding-block: 2em;
+  }
+  
+  .confirmed-booking h2 {
+	font-size: 3rem;
+	font-weight: bold;
+  }
+  
+  .confirmed-booking p {
+	font-size: 1.5rem;
+  }
+  
+  .fa-bounce {
+	--fa-bounce-land-scale-x: 1.2;
+	--fa-bounce-land-scale-y: 0.8;
+	--fa-bounce-rebound: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.confirmed-booking h2 {
+	  font-size: 2.5rem;
+	}
+  
+	.confirmed-booking p {
+	  font-size: 1.25rem;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.confirmed-booking h2 {
+	  font-size: 2rem;
+	}
+  
+	.confirmed-booking p {
+	  font-size: 1rem;
+	}
+  
+	.confirmed-booking {
+	  padding-block: 1em;
+	}
+  }
+  

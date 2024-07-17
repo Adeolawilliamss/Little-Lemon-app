@@ -1,0 +1,27 @@
+.logo-img {
+  width: 15rem;
+}
+
+.under-links ul li {
+  position: relative;
+  color: #232324;
+}
+
+.list:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #D10024;
+  transition: 0.2s all;
+}
+
+.list:hover{
+  color: #D10024;
+}
+
+.list:hover:after {
+  width: 100%;
+}

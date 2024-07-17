@@ -1,13 +1,17 @@
-// import Header from './Header';
-import Nav from './Nav'
-import Footer from './Footer';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import Nav from './Nav/Nav';
+import Footer from './Footer/Footer';
 
 const Layout = ({ children }) => {
+  const location = useLocation();
+  const showHeaderFooter = location.pathname !== '/confirmed-Booking' && location.pathname !== '/'; // Exclude home page
+
   return (
     <>
-      <Nav />  
+      {showHeaderFooter && <Nav />} 
       <main>{children}</main>
-      <Footer />
+      {showHeaderFooter && <Footer />}
     </>
   );
 };

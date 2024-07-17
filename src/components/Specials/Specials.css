@@ -1,0 +1,238 @@
+.Specials h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.search input {
+  padding: 0.5rem;
+  height: 45px;
+  width: 20rem;
+  outline: none;
+  border: 1px solid #242020;
+}
+
+.search input:focus {
+  border-color: rgb(41, 41, 189);
+  border: 2px solid #242020;
+}
+
+.search__icon {
+  position: absolute;
+  top: 5px;
+  left: 350px;
+  padding: 0.5rem;
+  color: var(--color);
+  font-size: 1.2rem;
+}
+
+.search .explore__btn {
+  width: 150px;
+  transition: all 0.5s;
+  height: 40px;
+  text-decoration: none;
+  background-color: rgb(41, 41, 189);
+  border-radius: 8px;
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+}
+
+.search .explore__btn:active {
+  transform: scale(0.95);
+  background-color: rgba(41, 41, 189, 0.8);
+}
+
+.search button:hover {
+  transform: scale(1.03);
+}
+
+.specials-slider {
+  width: 100%;
+}
+
+.Order-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.Order-button {
+  margin-top: 40px;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-weight: bold;
+  border: 0.1875rem solid #F4CE14;
+  transition: background, border, color 0.5s;
+}
+
+.Order-button:hover,
+.Order-button:focus {
+  background-color: #253d35;
+  border-color: #495E57;
+  color: #FFFFFF;
+}
+
+.special-item {
+  width: 30rem;
+  max-width: 30rem;
+  height: 35rem;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.special-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specials-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.specials-title {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.specials-description {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.delivery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.price {
+  font-weight: bold;
+  color: #EE9972;
+  font-size: large;
+}
+
+.motorcycle-icon {
+  margin-left: 0.5em;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.arrows span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border: 2px solid var(--btn-color);
+  border-radius: 50%;
+  transition: all 0.5s;
+  color: var(--color);
+  cursor: pointer;
+}
+
+.arrows span:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+  .search__icon {
+    top: 4rem;
+    left: 20rem;
+  }
+
+  .specials-heading {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* .specials-card {
+    width: 90%;
+    margin-bottom: 20px;
+  } */
+
+  .specials-title {
+    font-size: 1rem;
+  }
+
+  .specials-description {
+    font-size: 0.9rem;
+  }
+
+  .Order-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search input {
+    width: 100%
+  }
+
+  .search__icon {
+    top: 4rem;
+    left: 10rem;
+  }
+
+  .specials-heading h1 {
+    font-size: 1.1rem;
+  }
+
+  .arrows {
+    gap: 0.8rem;
+  }
+
+  .arrows span {
+    font-size: 0.9rem;
+  }
+
+  .specials-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .specials-card img {
+    border-radius: 4px;
+  }
+
+  .Order-button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+  
