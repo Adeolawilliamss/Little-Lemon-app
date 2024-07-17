@@ -1,0 +1,158 @@
+
+/* Base styles */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.logo__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo__content h1 {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.img__container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.logo {
+  height: 100px;
+  object-fit: contain;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subscribe h1 {
+  margin-bottom: 10px;
+}
+
+.subscribe .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--color);
+}
+
+.subscribe input {
+  border: none;
+  border-bottom: 1px solid var(--color);
+  width: 300px;
+  outline: none;
+  background-color: var(--background);
+  margin-right: 10px;
+  color: var(--text-color);
+}
+
+.arrow {
+  font-size: 1.3rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+  color: var(--primary);
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: var(--btn-color);
+}
+
+.socials {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0.5rem;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.socials a:hover {
+  background-color: var(--btn-color);
+  border: 2px solid var(--btn-color);
+  transform: translateY(-5px);
+}
+
+.footer__text, .footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.footer__heading h3 {
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.footer__heading p:hover {
+  color: #F4CE14;
+}
+
+.footer__heading p {
+  margin: 0.5rem 0;
+  color: #666666;
+}
+
+.footer__heading p:hover {
+  color: #F4CE14;
+}
+
+hr {
+  width: 100%;
+  margin: 1rem auto;
+  border: 1px solid black;
+  border-top: none;
+}
+
+@media screen and (max-width: 960px) {
+  .footer__text {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer__content {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__text {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer__content {
+    display: block;
+  }
+
+  .subscribe input {
+    width: 60%;
+    margin-right: 5px;
+  }
+}
