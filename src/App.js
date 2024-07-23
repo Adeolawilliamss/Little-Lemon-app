@@ -5,7 +5,8 @@ import HomePage from './components/Homepage/Homepage';
 import BookingPage from './Pages/BookingPage/Bookings/BookingPage';
 import ConfirmedBooking from './Pages/ConfirmedBooking/ConfirmedBooking'
 import pages from "./utils/pages";
-import UnderConstruction from "./components/UnderConstruction/Index";
+import OrderOnline from './components/UnderConstruction/OrderOnline';
+import Cart from './components/UnderConstruction/Cart';
 import Layout from "./components/Layout";
 import About from './Pages/About/About';
 import Menu from './Pages/Menu/Menu';
@@ -22,8 +23,8 @@ function App() {
         {pages.has('menu') && <Route path={pages.get('menu').path} element={<Menu />} />}
         {pages.has('bookingPage') && <Route path={pages.get('bookingPage').path} element={<BookingPage />} />}
         {pages.has('confirmedBooking') && <Route path={pages.get('confirmedBooking').path} element={<ConfirmedBooking />} />}
-        {pages.has('orderOnline') && <Route path={pages.get('underConstruction').path} element={<UnderConstruction />} />}
-        {pages.has('login') && <Route path={pages.get('underConstruction').path} element={<UnderConstruction />} />}
+        {pages.has('orderOnline') && <Route path={pages.get('orderOnline').path} element={<OrderOnline />} />}
+        {pages.has('cart') && <Route path={pages.get('cart').path} element={<Cart />} />}
       </Routes>
     </Layout>
     <ToastContainer />
