@@ -2,9 +2,25 @@
   width: 15rem;
 }
 
+.under-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (min-width: 768px) {
+  .under-links ul {
+    flex-direction: row;
+  }
+}
+
 .under-links ul li {
   position: relative;
   color: #232324;
+  padding: 10px 15px; /* Add padding to cover more area */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  display: flex;
+  align-items: center;
 }
 
 .list:after {
@@ -14,14 +30,26 @@
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #D10024;
+  background-color: green;
   transition: 0.2s all;
 }
 
-.list:hover{
-  color: #D10024;
+.list:hover:after {
+  width: 80%;
 }
 
-.list:hover:after {
-  width: 100%;
+.list-clsx {
+  background-color: green;
+  color: #ffffff !important; /* Use !important to override other styles */
 }
+
+.cart-clsx {
+  background-color: blue;
+  color: #ffffff !important;
+}
+
+.cart-clsx .fa-cart-shopping {
+  color: inherit !important; /* Make sure the icon inherits the color */
+}
+
+

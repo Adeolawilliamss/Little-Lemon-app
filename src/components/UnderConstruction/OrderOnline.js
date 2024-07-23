@@ -3,7 +3,7 @@ import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Index.css';
 
-const UnderConstruction = () => {
+const OrderOnline = () => {
   return (
     <div className="py-4 border-b-4 w-full min-h-full">
       <div className="container mx-auto px-4">
@@ -16,4 +16,4 @@ const UnderConstruction = () => {
   );
 };
 
-export default UnderConstruction;
+export default OrderOnline;
